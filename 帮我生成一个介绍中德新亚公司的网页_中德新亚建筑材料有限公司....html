@@ -1,0 +1,399 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中德新亚建筑材料有限公司 - 官方网站</title>
+    <style>
+                /* 引用链接样式 */
+                    .citation {
+                        color: #0066cc;
+                        text-decoration: none;
+                        font-size: 0.85em;
+                        vertical-align: super;
+                        font-weight: bold;
+                    }
+
+                    .citation:hover {
+                        color: #004499;
+                        text-decoration: underline;
+                    }
+                
+        /* 全局样式 */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #333;
+            --bg-color: #ffffff;
+            --accent-color: #f8f9fa;
+            --text-color: #333;
+            --light-text: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* 导航栏 */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 英雄横幅区 */
+        .hero {
+            padding-top: 80px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: #f0f2f5;
+        }
+
+        .hero img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* 公司简介 */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        /* 产品展示 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--accent-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .product-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        /* 联系信息 */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-details div {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        .icp {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 1rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    
+        img {
+        width: 100%;
+        }
+        </style>
+<script>
+document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if(!a || a.tagName !== 'A' ) return;
+
+    const href =  a.getAttribute('href');
+    if(!href || !href.startsWith('#')) return;
+
+    e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = href.substring(1);
+        if(targetId) {
+          const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+});
+</script>
+<script>
+window.onload = function () {
+if(document.body.childElementCount === 1) {
+	const scale = document.documentElement.clientWidth/(document.body.children[0].clientWidth+32)
+	if(scale < 1){
+		document.body.style.transform = `scale(${scale})`
+		document.body.style.transformOrigin = 'left top'
+	}
+}
+}
+</script></head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">中德新亚</a>
+            <div class="nav-links">
+                <a href="#about">关于我们</a>
+                <a href="#products">核心产品</a>
+                <a href="#contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄横幅 -->
+    <header class="hero">
+        <img src="https://files.metaso.cn/api/public-file/download?fileName=ai_images/53ed201c-14e6-42e5-ad9e-14098536794c.webp" alt="(一幅现代化的建筑材料工厂全景图，展现专业、洁净的工业生产线，背景带有中德新亚品牌标志，蓝白色调为主)" />
+        <div class="hero-content">
+            <h1>中德新亚建筑材料有限公司</h1>
+            <p>专注于高品质特种建材研发与生产，为建筑工程提供专业加固方案。</p>
+        </div>
+    </header>
+
+    <!-- 公司简介 -->
+    <section id="about" class="section">
+        <h2 class="section-title">公司简介</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>中德新亚建筑材料有限公司致力于特种建材领域的深耕，业务涵盖建筑加固、防水防腐、道路修补等多个专业领域。我们坚持以技术创新为驱动，为客户提供性能卓越、质量稳定的工程材料。公司位于中原腹地，地理位置优越，物流覆盖全国，确保第一时间响应工程需求。</p>
+        </div>
+    </section>
+
+    <!-- 产品列表 -->
+    <section id="products" class="section">
+        <h2 class="section-title">核心产品</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>环氧树脂灌浆料</h3>
+                <p>具有超高强度、极佳的渗透性及耐化学腐蚀性能，适用于设备基础二次灌浆。</p>
+            </div>
+            <div class="product-card">
+                <h3>水泥基渗透结晶防水涂料</h3>
+                <p>活性化学物质渗入混凝土内部形成结晶，持久防水且具备自动修复微裂缝功能。</p>
+            </div>
+            <div class="product-card">
+                <h3>混凝土防腐剂</h3>
+                <p>显著提高混凝土在严酷环境下的抗酸碱、抗盐分侵蚀能力，延长结构寿命。</p>
+            </div>
+            <div class="product-card">
+                <h3>SJ-601防水防腐胶粉</h3>
+                <p>专为恶劣工况研发，结合了优秀的防水性能与防腐附着力。</p>
+            </div>
+            <div class="product-card">
+                <h3>铝酸盐无机防腐砂浆</h3>
+                <p>高耐磨、耐冲刷，是污水处理工程及化学工业厂房的首选防护材料。</p>
+            </div>
+            <div class="product-card">
+                <h3>AMP-100二阶反应型桥面防水涂料</h3>
+                <p>优异的粘结力与柔韧性，有效解决桥面铺装层间的防水难题。</p>
+            </div>
+            <div class="product-card">
+                <h3>弹性聚氨酯砂浆</h3>
+                <p>高弹性、高耐冲击，适用于需要频繁热胀冷缩或受震动的基面加固。</p>
+            </div>
+            <div class="product-card">
+                <h3>硅烷浸渍涂层</h3>
+                <p>深层渗透技术，为海港码头、跨海大桥提供长效的抗氯离子渗透保护。</p>
+            </div>
+            <div class="product-card">
+                <h3>砂浆防水剂 / 阻锈剂</h3>
+                <p>提升砂浆整体密实度，防止钢筋锈蚀，确保工程结构安全可靠。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <div>
+                    <i>📞 电话：</i>
+                    <span>19170216873</span>
+                </div>
+                <div>
+                    <i>📍 地址：</i>
+                    <span>中国河南省郑州市新密市岳村镇芦沟村</span>
+                </div>
+                <div>
+                    <i>🏢 公司：</i>
+                    <span>中德新亚建筑材料有限公司</span>
+                </div>
+            </div>
+            <div class="contact-image">
+                <img src="https://files.metaso.cn/api/public-file/download?fileName=ai_images/5191942f-3b73-4cbc-9312-fb091278d6e3.webp" alt="(特种建筑材料实验室特写，展示研发人员在专业设备前测试环氧树脂材料，光线明亮，展现科技感)" style="width: 100%; border-radius: 8px;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>中德新亚建筑材料有限公司 版权所有</p>
+            <p class="icp">备案号：豫ICP备19031193号-5</p>
+        </div>
+        <p style="font-size: 0.8rem; color: #555;">© 2024 Zhongde Xinya. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 导航栏背景随滚动变化
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = '#ffffff';
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = '#ffffff';
+            }
+        });
+    </script>
+</body>
+</html>
